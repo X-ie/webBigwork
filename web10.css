@@ -1,0 +1,255 @@
+body{
+	background-color: black;
+}
+.head{
+	width: 1345px;
+	height: 100px;
+	margin: 0 auto;
+}
+.con{
+	width: 1200px;
+}
+.logo{
+	height: 100px;
+	width: 200px;
+	padding-left: 100px;
+	float: left;
+}
+.sousuo{
+	float: left;
+	margin-top: 30px;
+	height: 30px;
+	font-size: 20px;
+	color: rgba(191,191,191,1);
+	margin-left: 40px;
+	border-radius: 5px;
+}
+.logo1{
+	float: left;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 30px;
+    height: 32px;
+    border: 0;
+    background: #00A4FFFF url('photo/8.png')
+    no-repeat center center;
+}
+.headvau a{
+	float:left;
+	display: inline-block;
+	margin-right: 60px;
+	margin-top: 32px;
+	margin-left: 60px;
+	color: white;
+	height: 30px;
+}
+.headvau a:hover{
+	 color: red;
+	 text-decoration:none; 
+}
+
+
+/*dier*/
+
+.con{
+	width: 100%;
+}
+.con1{
+	width: 1340px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+	background-color: black;
+}
+.logo2 {
+	width: 100%;
+	height: 500px;
+	display:none;
+
+}
+.res{
+
+	height: 60px;
+	width: 245px;
+	position: absolute;
+	right: 100px;
+	top: 50px;
+	float: right;
+	position: absolute;
+
+}
+.dengru{
+	font-size: 12px;
+	margin-right: 30px;
+	padding-left: 20px;
+	color: white;
+}
+/* ss*/
+.con1{
+	width: 100%;
+	height: 500px;
+}
+.cai{
+	width: 1280px;
+	padding-left: 230px;
+	margin: 0 auto;
+
+}
+.tu1{
+	height: 500px;
+	width: 500px;
+}
+.tu2{
+	height: 244px;
+	width: 250px;
+
+}
+.zuo{
+	float: left;
+	height: 500px;
+	width: 500px;
+	margin-right: 20px;
+	position: relative;
+}
+.you{
+	display: inline-block;
+	float: left;
+	height: 500px;
+	width: 700px;
+	margin-left: 20px;
+	position: relative;
+}
+.qie1{
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: olive;
+    font-size: 40px;
+    height: 50px;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+.qie2{
+	position: absolute;
+	bottom: 260px;
+	left: 10%;
+	font-size: 20px;
+	color: red;
+	height: 20px;
+	opacity: 0.5;
+}
+.qie3{
+	position: absolute;
+	bottom: 260px;
+	left: 300px;
+	font-size: 20px;
+	color: red;
+	height: 20px;
+	opacity: 0.5;
+
+}
+.qie4{
+	position: absolute;
+	bottom: 12px;
+	left: 10%;
+	font-size: 20px;
+	color: white;
+	height: 20px;
+	opacity: 0.8;
+
+}
+.qie5{
+	position: absolute;
+	bottom: 12px;
+	left: 300px;
+	font-size: 20px;
+	color: red;
+	height: 20px;
+	opacity: 0.5;
+
+}
+/*ds*/
+.last{
+	width: 100%;
+	height: 100px;
+	background-color: black;
+}
+.last1{
+	width: 1200px;
+	margin: 0 auto;
+}
+.zuo1{
+	width: 900px;
+}
+.zuo1 a{
+	color: white;
+	float: left;
+	margin-right: 15px;
+	padding-left: 50px;
+	padding-top: 40px;
+} 
+.p1{
+	color: white;
+}
+.you1{
+	float: left;
+	margin-left: 200px;
+}
+.qian{
+	padding-right: 50px;
+	width: 100px;
+	height: 94px;
+}
+.zhanghao{
+	float: left;
+	color: white;
+}
+.mima{
+	float: left;
+	color: white;
+}
+.ph3{
+	width: 100%;
+	height: 500px;
+	display: block;
+}
+.ph15{
+	position: absolute;
+	right: 15px;
+	top: 200px;
+	width: 50px;
+	height: 50px;
+}
+.ph16{
+	position: absolute;
+	left: 15px;
+	top: 200px;
+	width: 50px;
+	height: 50px;
+}
+.box{
+	width: 100px;
+	height: 100px;
+	position: absolute;	
+	top: 0px;		
+	left: 0px;
+}
+.time{
+	height: 25px;
+	width: 1300px;
+	margin: 0 auto;
+	background-color: black;
+}
+.time11{
+	text-align: center;
+
+}
+#dateSpan{
+	height: 25px;
+	width: 500px;
+	margin-left: 30%;
+	color: white;
+}

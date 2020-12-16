@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="web10.css">
+</head>
+<body>
+	<div class="time" id="time">
+		<p id="dateSpan"></p>   
+	</div>
+	<img src="photo/17.jpg" id="box" class="box" style="z-index: 99999;position: fixed; left:0 px ">
+	<div class="head">
+		<div class="con clear">
+			<img src="photo/17.png" class="logo">
+			<form>
+				<input type="text" value="可乐鸡翅"  class="sousuo">
+				<input type="button" class="logo1">
+			</form>
+			<ul class="headvau">
+				<li><a href="">菜单</a></li>
+				<li><a href="">排行</a></li>
+				<li><a href="">招牌菜</a></li>
+				<li><a href="">精品菜</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="con">
+		<div class="con1" id ="Con1">
+			<img src="photo/2.png" class="ph15" id="ph15">
+			<img src="photo/3.png" class="ph16" id="ph16">
+			<img src="photo/10.jpg" class="ph3" id="ph1">
+			<img src="photo/11.jpg" class="logo2" id = "ph2">
+			<form action="" class="res clear">
+				<span class="zhanghao">账号：</span>
+				<input type="text" value="请输入账号">
+				<span class="mima">密码：</span>
+				<input type="password">
+				<span class="dengru">登入账号</span>
+				<span class="dengru">找回密码</span>
+			</form>
+		</div>
+	</div>
+	<div class="con1">
+		<div class="cai clear">
+			<div class="zuo clear">
+				<img src="photo/12.jpg" class="tu1">
+				<span class="qie1">老北京四合院分店</span>
+			</div>
+			<div class="you clear">
+				<img src="photo/13.jpg" class="tu2" id="f1" >
+				<span class="qie2">迷你烤肉 ￥10</span>
+				<img src="photo/3.jpg" class="tu2">
+				<span class="qie3">可乐鸡翅 ￥20</span>
+				<img src="photo/14.jpg" class="tu2">
+				<span class="qie4">迷你烤肠 ￥30</span>
+				<img src="photo/5.jpg" class="tu2">
+				<span class="qie5">红烧肉 ￥40</span>
+			</div>
+		</div>
+	</div>
+	<div class="last">
+		<div class="last1 clear">
+			<div class="zuo1">
+				<ul>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">诚聘英才</a></li>
+					<li><a href="">版权说明</a></li>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">帮助与反馈</a></li>
+					<li><a href="">免费吃美食</a></li>
+				</ul>
+			</div>
+			<div class="you1">
+				<img src="photo/12.png" class="qian">
+			</div>
+		</div>
+	</div>
+	<canvas id="christmasCanvas"
+        style="top: 0px; left: 0px; z-index: 5000; position: fixed; pointer-events: none;"></canvas>
+		
+</body>
+<script type="text/javascript">
+		var ph1 = document.getElementById("ph1");
+	var ph2 = document.getElementById("ph2");
+	var ph15 = document.getElementById("ph15");
+	var ph16 = document.getElementById("ph16");
+	var f1 = document.getElementById("f1");
+	ph15.onclick = function(){
+		ph1.style.display= "none";
+		ph2.style.display = "block";
+	}
+	ph16.onclick = function(){
+		ph1.style.display= "block";
+		ph2.style.display = "none";
+	}
+
+	var dateSpan= document.getElementById("dateSpan");
+	   showTime(); 
+	 function showTime() {            
+		var myDate = new Date();            
+		var year = myDate.getFullYear();
+		var month = myDate.getMonth()+1;            
+		var date = myDate.getDate();            
+		var day = myDate.getDay();            
+		var hours = myDate.getHours();            
+		var mins = myDate.getMinutes();            
+		var secs = myDate.getSeconds();
+		
+		switch(day){                
+		case 0:day="日";break;                
+		case 1:day="一";break;                
+		case 2:day="二";break;                
+		case 3:day="三";break;                
+		case 4:day="四";break;                
+		case 5:day="五";break;                
+		case 6:day="六";break;
+		}            
+		//设置时间的位数            
+		if(month<10){                
+		month = "0" + month;            
+		}            
+		if(date<10){                
+		date = "0" + date;            
+		}            
+		if(hours<10){                
+		hours = "0" + hours;            
+		}            
+		if(mins<10){                
+		mins = "0" + mins;            
+		}            
+		if(secs<10){                
+		secs = "0" + secs;            
+		}            
+		if(year<10){                
+		year = "00" + year;            
+		}else if(year<100){                
+		year = "0"+ year;            
+		}
+		window.setInterval(showTime,1000);                         
+		dateSpan.innerHTML = "欢迎光临，现在是："+year + "年" + month + "月" + date + "日" + "星期" + day + " " + hours + ":" + mins + ":" + secs;      
+		} 
+function getStyle(obj,style) {  
+		if(obj.currentStyle) 
+		{  
+		    return obj.currentStyle[style];  
+		} 
+		else 
+		{
+		    return getComputedStyle(obj)[style];  
+		}  	
+	}
+	var box = document.getElementById("box");
+	box.onload= function(){
+		cal();
+		setInterval(cal,10000);
+
+		function cal(){
+		var now2 = parseInt(650);
+		var now3 = parseInt(650);
+		var timer1 = setInterval(function(){
+		var speed = 1.5;
+		if(now2==0&&now3==0)
+		{
+			clearInterval(timer1);
+		}
+		else{
+			box.style.left = now2-speed +"px";
+			box.style.top = now3-speed +"px";
+			now2 = parseInt(box.style.left) ;
+			now3= parseInt(box.style.top);
+		}
+	},10);
+		
+			var timer = setInterval(function(){
+				var now = parseInt(getStyle(box,"left"));
+				var now1=parseInt(getStyle(box,"top"));
+				var speed = 1.5;
+				//var speed = Math.ceil(500-now)/10;
+				if(now==650&&now1==650)
+				{
+					clearInterval(timer);
+				}
+				else{
+					box.style.left = now+speed +"px";
+					box.style.top = now1+speed +"px";
+				}
+				},10);
+			}		
+	}
+	var snow = function () {
+        var b = document.getElementById("christmasCanvas"), a = b.getContext("2d"), d = window.innerWidth,
+            c = window.innerHeight;
+        b.width = d;
+        b.height = c;
+        for (var e = [], b = 0; b < 70; b++) {
+            e.push({x: Math.random() * d, y: Math.random() * c, r: Math.random() * 4 + 1, d: Math.random() * 70})
+        }
+        var h = 0;
+        window.intervral4Christmas = setInterval(function () {
+            a.clearRect(0, 0, d, c);
+            a.fillStyle = "rgba(255, 255, 0, 0.6)";
+            a.shadowBlur = 5;
+            a.shadowColor = "rgba(255, 255, 255, 0.9)";
+            a.beginPath();
+            for (var b = 0; b < 70; b++) {
+                var f = e[b];
+                a.moveTo(f.x, f.y);
+                a.arc(f.x, f.y, f.r, 0, Math.PI * 2, !0)
+            }
+            a.fill();
+            h += 0.01;
+            for (b = 0; b < 70; b++) {
+                if (f = e[b], f.y += Math.cos(h + f.d) + 1 + f.r / 2, f.x += Math.sin(h) * 2, f.x > d + 5 || f.x < -5 || f.y > c) {
+                    e[b] = b % 3 > 0 ? {x: Math.random() * d, y: -10, r: f.r, d: f.d} : Math.sin(h) > 0 ? {
+                        x: -5,
+                        y: Math.random() * c,
+                        r: f.r,
+                        d: f.d
+                    } : {x: d + 5, y: Math.random() * c, r: f.r, d: f.d}
+                }
+            }
+        }, 70)
+    }
+    snow();
+</script>
+</html>
